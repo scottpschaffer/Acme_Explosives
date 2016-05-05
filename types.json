@@ -1,0 +1,58 @@
+{
+  "types": [
+    {
+      "id": 0,
+      "category": 0,
+      "name": "personal",
+      "description": "Fireworks intended for recreational use during holiday celebrations"
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "name": "professional",
+      "description": "Fireworks intended for use by professionals for any celebration"
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "name": "illegal",
+      "description": "Fireworks intended for use by criminals for fun and profit"
+    },
+    {
+      "id": 3,
+      "category": 1,
+      "name": "amateur",
+      "description": "Fun times for the insane crowd"
+    },
+    {
+      "id": 4,
+      "category": 1,
+      "name": "journeyman",
+      "description": "On the road to master the art of destruction"
+    },
+    {
+      "id": 5,
+      "category": 1,
+      "name": "Master",
+      "description": "For the Yodas of demolition"
+    },
+    {
+      "id": 6,
+      "category": 2,
+      "name": "Private",
+      "description": "So cute with those explosives"
+    },
+    {
+      "id": 7,
+      "category": 2,
+      "name": "Sargeant",
+      "description": "He blowed up real good"
+    },
+    {
+      "id": 8,
+      "category": 2,
+      "name": "General",
+      "description": "I like to destroy things"
+    }
+  ]
+}
