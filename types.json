@@ -3,31 +3,31 @@
     {
       "id": 0,
       "category": 0,
-      "name": "personal",
+      "name": "Personal",
       "description": "Fireworks intended for recreational use during holiday celebrations"
     },
     {
       "id": 1,
       "category": 0,
-      "name": "professional",
+      "name": "Professional",
       "description": "Fireworks intended for use by professionals for any celebration"
     },
     {
       "id": 2,
       "category": 0,
-      "name": "illegal",
+      "name": "Illegal",
       "description": "Fireworks intended for use by criminals for fun and profit"
     },
     {
       "id": 3,
       "category": 1,
-      "name": "amateur",
+      "name": "Amateur",
       "description": "Fun times for the insane crowd"
     },
     {
       "id": 4,
       "category": 1,
-      "name": "journeyman",
+      "name": "Journeyman",
       "description": "On the road to master the art of destruction"
     },
     {

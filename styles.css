@@ -1,0 +1,29 @@
+body {
+  background-color: goldenrod;
+}
+
+#type1 {
+  color: red;
+  font-size: 20px;
+}
+
+#type2 {
+  color: white;
+  font-size: 20px;
+}
+#type3 {
+  color: blue;
+  font-size: 20px;
+}
+
+#Title {
+  color: green;
+  font-size: 3em;
+  /*text-align: center;*/
+}
+
+.card {
+  border: 1px solid black;
+  margin: 5px;
+  text-align: center;
+}

@@ -1,15 +1,15 @@
 "use strict";
 
-function blah(result){
-  alert(result.id);
-}
-
-$(document).ready(function(){
+// function blah(result){
+//  alert(result.id);
+// }
   let a = [];
   let theCategories = [];
   let theTypes = [];
   let theProducts = [];
   let selectedCat;
+$(document).ready(function(){
+
 
   let firstRead = function(){
     return new Promise((resolve, reject) => {
@@ -63,8 +63,8 @@ $(document).ready(function(){
       console.log("data3", data3);
       theProducts = data3.products;
       domFillSelect();
-    })
-
+    });
+});
   //var $qqq1 = $(`<option value='qwert'>qwert</option>`);
   // var $qqq2 = $("<option value='trewq'>trewq</option>");
 
@@ -74,43 +74,55 @@ $(document).ready(function(){
   // $('#cat1').append($qqq2);
 
 
-  function domFillSelect(){
-    // console.log("aa", aa.length);
-    for (let i=0; i<theCategories.length; i++){
-      var $addToSelect = $(`<option value='${theCategories[i].name}'>${theCategories[i].name}</option>`);
-      $('#cat1').append($addToSelect);
+function domFillSelect(){
+  // console.log("aa", aa.length);
+  for (let i=0; i<theCategories.length; i++){
+    var $addToSelect = $(`<option value='${theCategories[i].name}'>${theCategories[i].name}</option>`);
+    $('#cat1').append($addToSelect);
+  }
+  
+}
+
+$('#cat1').change(function(){
+  alert (this.value);
+  let selectedTypes = [];
+  let selectedProducts = [];
+
+  $("#type1").text("Type #1: ");
+  $("#type2").text("Type #2: ");
+  $("#type3").text("Type #3: ");
+
+  for (let j=0; j<theCategories.length; j++){
+    if (theCategories[j].name === this.value){
+      selectedCat = theCategories[j].id;
+      alert(selectedCat);
     }
-    
   }
 
-  $('#cat1').change(function(){
-    alert (this.value);
-    let selectedTypes = [];
-    let selectedProducts = [];
-    for (let j=0; j<theCategories.length; j++){
-      if (theCategories[j].name === this.value){
-        selectedCat = theCategories[j].id;
-        alert(selectedCat);
+  for (let k=0; k<theTypes.length; k++){
+    if (theTypes[k].category === selectedCat){
+      selectedTypes.push(theTypes[k]);
+    }
+  }
+  console.log("selectedTypes", selectedTypes);
+  
+  for (let l=0; l<theProducts.length; l++){
+    for (let m=0; m<selectedTypes.length; m++){
+      if (theProducts[l].type === selectedTypes[m]){
+        selectedProducts.push(theProducts[l].id);
       }
     }
+  }
+  console.log("selectedProducts", selectedProducts);
 
-    for (let k=0; k<theTypes.length; k++){
-      if (theTypes[k].category === selectedCat){
-        selectedTypes.push(theTypes[k].id);
-      }
-    }
-    console.log("selectedTypes", selectedTypes);
-    
-    for (let l=0; l<theProducts.length; l++){
-      for (let m=0; m<selectedTypes.length; m++){
-        if (theProducts[l].type === selectedTypes[m]){
-          selectedProducts.push(theProducts[l].id);
-        }
-      }
-    }
-    console.log("selectedProducts", selectedProducts);
-  })
+  
+  $("#type1").append(selectedTypes[0].name + ' - "' + selectedTypes[0].description + '"');
+  $("#type2").append(selectedTypes[1].name + ' - "' + selectedTypes[1].description + '"');
+  $("#type3").append(selectedTypes[2].name + ' - "' + selectedTypes[2].description + '"');
+
+
 });
+// });
 
 // .append($qqq);
 // function getCategories(){
